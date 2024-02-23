@@ -1,50 +1,40 @@
 # BlenderAddons4CH
 Addons Blender for Cultural Heritage
 
-Welcome to the GitHub page dedicated to enhancing the work within the cultural heritage community, particularly in the fields of archaeology. This repository is designed as a comprehensive guide to a handpicked collection of Blender add-ons, meticulously curated to address common challenges faced in our pipelines. 
-
-Our focus is on open-source software, reflecting our commitment to accessibility and community-driven development. Within this collection, you'll find tools that are indispensable for 3D modeling, visualization, and reconstruction tasks, all tailored to meet the specific needs of professionals working with cultural heritage.
-
-In addition to the open-source tools, we recognize the value of certain proprietary solutions in overcoming specific hurdles. Therefore, we've included a section dedicated to premium software that, despite their cost, offer unmatched benefits and are considered by many in our community as essential tools of the trade.
-
-This repository, complete with this detailed Markdown README, is not just a list of tools but a resource for learning, sharing, and collaborating. Whether you're involved in the preservation of historical sites, conducting archaeological research, or engaged in the architectural reconstruction of heritage sites, here you'll find a suite of tools designed to support and enhance your work.
-
-We invite you to explore, contribute, and join us in building a richer, more accessible, and collaborative cultural heritage community through technology.
-
-Index:
-	1. Sites where to find add-ons
+Indice:
+	1. Siti in cui trovare add-ons
 	2. Texture painting
 	3. Vertex Painting
 	4. Sculpting
 	5. Materials
 	6. PBR materials
-	7. Speed up Modelling tasks and procedural modelling
+	7. Speed up Modelling tasks e modellazione procedurale
 	8. UV mapping tools
-	9. Enhancing the 3D space interface
+	9. Potenziare interfaccia spazio 3D
 	10. Baking tools
-	11. Integration with photogrammetry
+	11. Integrazione con la fotogrammetria
 	12. Compositor
-	13. Multi-user
-	14. Landscape management
-	15. Camera and Rendering (static)
+	13. Multi utenza
+	14. Gestione paesaggi
+	15. Camera e Rendering (statico)
 	16. Animation
-	17. Connection to external libraries
+	17. Connessione a librerie esterne
 	18. Code Snippets
-	19. Beautiful themes for Blender
+	19. Temi belli per Blender
 	20. Startup file and configuration
-	21. Purchased
+	21. Acquistati
 	22. Simulation
 	23. Exporter/Importer
 
-1. Sites to find add-ons
+1. Siti in cui trovare add-ons
 
 Official Blender Add-ons
-http://wiki.blender.org/index.php/Extensions:4.0
+http://wiki.blender.org/index.php/Extensions:2.6
 Collection with animated gif description and external links for download
 http://blenderaddonlist.blogspot.it/
-Github search based on keywords: Blender and Pyhton (+1700 add-ons)
+Github search based on keywords: Blender eand Pyhton (+1700 add-ons)
 https://github.com/search?l=Python&q=blender&type=Repositories&utf8=%E2%9C%93
-Highlight of the best 12 add-ons out there (not so complete and questionable but useful)
+Highlight of the best 12 add-ons out there (not so complete and questionable but usefull)
 http://www.blenderguru.com/articles/12-useful-blender-addons-everyone-should-use/
 
 2. Texture Painting
@@ -55,39 +45,39 @@ https://www.dropbox.com/s/2tr64y6w7sgolr7/vtools_libraryManager.py?dl=0
 Texture from Image
 
 Texture Paint plus
-Originally written by Bart Crouch (author of the exporter for sketchfab, among other things) and later supplemented by two other artists and developers, it is a useful tool for painting in Blender.
+Originariamente scritto da Bart Crouch (autore tra le altre cose dell’exporter per sketchfab) e poi integrato da altri due artisti e sviluppatori, è uno strumento utile  per dipingere in Blender.
 https://github.com/artistCDMJ/texture_paint_plus/archive/master.zip
 
 Texture Presets
-excellent add-on for quickly creating images with a known size in the power of two (1024-2048-4096)
+ottimo add-on per creare rapidamente immagini con dimensione nota in potenza di due (1024-2048-4096)
 
 Zero Brush
-old version of zero brush (when there was no paid stand-alone version, now to use it you have to get all blender sensei-free but VERY invasive)
+vecchia versione di zero brush (quando non era a pagamento la versione stand-alone, adesso per usarla devi cuccarti tutto blender sensei-gratuito ma MOLTO invasivo)
 
 Brushes
-brushes to be imported in "append" mode from the blend file included here
+pennelli da importare in modalità “append” dal file blend qui incluso
 https://github.com/xrg81/brushes
 
-Vertex Painting
+3.Vertex Painting
 
 Oscurart worn edges
-Add-on for painting the colour per vertex of meshes at wear areas of a model (exposed edges etc.). Great for creating wear maps.
+Add-on per dipingere il color per vertex delle mesh in corrispondenza delle zone usurabili di un modello (spigoli esposti etc..). Ottimo per creare delle mappe di usura.
 
 Slope
-Replace active vertex group or vertex colour layer with values representing the slope of a face (now also found in Blender GIS)
-version 2 of the same (?)
+Replace active vertex group or vertex color layer with values representing the slope of a face (si trova ora anche in Blender GIS)
+versione 2 dello stesso (?)
 
 Transpal
-Brilliant tool for vertex painting based on visual rules and palettes (also from Gimp)
+Geniale strumento per il vertex painting basato su regole visuali e su palettes (anche da Gimp)
 
-Sculpting
+4.Sculpting
 
 Sculpt Brushes
-Practical collection of sculpting brushes (install inside Blender and enable with a button)
+Pratica raccolta di pennelli per lo sculpting (si installa dentro Blender e si abilita con un bottone)
 Space view brush
-With alt+v you have all the sculpting commands at your disposal
+Con alt+v hai a disposizione tutti i comandi di sculpting
 
-Materials
+5.Materials
 
 Matalogue
 http://adaptivesamples.com/2015/08/04/introducing-matalogue/
@@ -95,40 +85,40 @@ http://adaptivesamples.com/2015/08/04/introducing-matalogue/
 Display material relations
 
 Material Converter
-Material converter from Blender internal (including GLSL materials like photoscan) to cycles (deprecated in the latest version, can be found in Blender Sensei, in a paid add-on called zero-brush, present in this list in its old, non-paid version - under painting)
+Convertitore di materiali da Blender internal (compresi materiali GLSL tipo photoscan) verso cycles (deprecato nell’ultima versione, si può trovare in Blender Sensei, in un add-on a pagamento di nome zero-brush, presente in questa lista nella sua vecchia versione non a pagamento - sotto painting)
 
 6.PBR materials and painting with Blender and FOSS ecosystem around it
 It is a combo of different tools:
 
-Realtime visualisation and editing of PBR materials
-Blender PBR branch by Cément Foucalt - http://www.clement-foucault.com/
+Realtime visualization and editing of PBR materials
+Blender PBR branch by Cément Foucalt -  http://www.clement-foucault.com/
 now it is in the 2.8 development branch
 
 Materials
-Addons for PBR materials
+Addon per materiale PBR
 Shader easyPBR - https://cgcookiemarkets.com/all-products/pbr-material-node/
 UE4Shader - 
 Shader Library - 
-PBR material taking in mind substance material editor (but it works well with all kinds of metallic-roughtness pipeline - 
+PBR material taking in mind substance material editor (but it works well with all kind of metallic-roughtness pipeline - 
 BR Node V1.5
-PBR made by me following Cynicat
-Blender Brit (following directions from Cynicat and Blender Guru)
+PBR fatto da me seguendo Cynicat
+Blender Brit (seguendo indicazioni di Cynicat e Blender Guru)
 http://www.blenderbrit.co.uk/free-tool-pbr-node-pack/
 Mega Shader by Stefano Scarioni CC-BY
 http://www.stefanoscarioni.com/en/2016/06/13/mega-shader-2/
-Bachelor's thesis on PBR in Blender - Sairiala 2015 PBR workflows in Cycles Render Engine ( Bachelor's thesis)
+Tesi di laurea su PBR in Blender -  Sairiala 2015  PBR workflows in Cycles Render Engine ( Bachelor’s thesis)
 
 FOSS ecosystem around Blender to improve paint/sculpt/PBR pipeline in Blender
-Xnormal - www.xnormal.net/ - open source, efficient baker from hipoly to low poly of MANY maps (WIN), a bit slow (the CUDA option that should make it FAST crashes me), (WIN).
-Awesome Bump - http://awesomebump.besaba.com/ - open source, allows to process metallic and roughtness maps (PBR-metallic flavour) in automatic or semi-automatic mode, (MAC, WIN, LINUX). Crash with maps of 8192 :-(
-HDRluminance - qtpfsgui.sourceforge.net - open source, useful for making hdr from panoramas with different exposure (MAC, WIN, LINUX).
-parallels with closed software solutions at PBR pipeline improvement
-Speed up Modelling tasks
+Xnormal - www.xnormal.net/ - open source, baker efficiente da hipoly a low poly di MOLTE mappe (WIN), un pò lento (l'opzione CUDA che dovrebbe renderlo VELOCISSIMO mi crasha), (WIN).
+Awesome Bump - http://awesomebump.besaba.com/ - open source, permette di elaborare mappe metallic e roughtness (PBR-metallic flavour) in modalità automatica o semi-automatica, (MAC, WIN, LINUX). Crasha con mappe di 8192 :-(
+HDRluminance - qtpfsgui.sourceforge.net - open source, utile per fare hdr a partire da panorami con diversa esposizione (MAC, WIN, LINUX).
+parallels with closed software solutions at  PBR pipeline improvement
+7.Speed up Modelling tasks
 
 np_station
 https://blenderartists.org/t/addon-np-station/686462
 
-Sectioning material
+Materiale per sezionare
 https://blendbits.blogspot.it/2017/02/the-cutaway-shader-free-blender-add-on.html
 
 Mesh align plus
@@ -137,9 +127,6 @@ https://github.com/egtwobits/mesh-align-plus/releases
 Selective unhide
 https://github.com/RayMairlot/Selective-Unhide 
 
-<<<<<<< HEAD
-Sna
-=======
 Snap advanced
 
 Drop to Ground
@@ -150,7 +137,11 @@ Corrects non-planar quads/ metti su uno stesso piano le facce selezionate (in ba
 
 Rotation Constrained
 
+![Alt text](<files/tip rotation constrained.png>)
+
 Per creare circonferenze a partire da tre punti
+
+![Alt text](files/3points.png)
 
 Object cross section
 Creates cross section(s) of the selected object(s) using the active object as cut plane
@@ -421,7 +412,6 @@ bpainter: monumentale addon per Blender
 Modeling-Cloth
 ottimo add-on per modellare e simulare tessuti
 https://github.com/the3dadvantage/Modeling-Cloth
->>>>>>> parent of 1a0f821 (Update README.md)
 
 	23. Exporter/Importer
 https://github.com/KhronosGroup/glTF-Blender-Exporter
