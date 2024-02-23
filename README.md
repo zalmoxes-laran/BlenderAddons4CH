@@ -413,6 +413,10 @@ Modeling-Cloth
 ottimo add-on per modellare e simulare tessuti
 https://github.com/the3dadvantage/Modeling-Cloth
 
+Ocupe Projectors
+Ottimo add-on pr simulare la proiezione su superfici nello spazio 3D
+https://github.com/Ocupe/Projectors
+
 	23. Exporter/Importer
 https://github.com/KhronosGroup/glTF-Blender-Exporter
 http://renderhjs.net/fbxbundle/
