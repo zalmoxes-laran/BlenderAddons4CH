@@ -137,7 +137,11 @@ Corrects non-planar quads/ metti su uno stesso piano le facce selezionate (in ba
 
 Rotation Constrained
 
+![Alt text](<files/tip rotation constrained.png>)
+
 Per creare circonferenze a partire da tre punti
+
+![Alt text](files/3points.png)
 
 Object cross section
 Creates cross section(s) of the selected object(s) using the active object as cut plane
