@@ -1,8 +1,23 @@
 # BlenderAddons4CH
 Addons Blender for Cultural Heritage
 
+# Table of contents
+1. [Sites where to find add-ons](#sites_addons)
+    1. [Official](#sites_official)
+
+2. [Some paragraph](#paragraph1)
+3. [Another paragraph](#paragraph2)
+
+
+
+## Some paragraph <a name="paragraph1"></a>
+The first paragraph text
+
+## Another paragraph <a name="paragraph2"></a>
+The second paragraph text
+
 Indice:
-	1. Siti in cui trovare add-ons
+	1. Sites where to find add-ons
 	2. Texture painting
 	3. Vertex Painting
 	4. Sculpting
@@ -12,7 +27,7 @@ Indice:
 	8. UV mapping tools
 	9. Potenziare interfaccia spazio 3D
 	10. Baking tools
-	11. Integrazione con la fotogrammetria
+	11. Integrazione con la fotogrammetria e 3DSGS
 	12. Compositor
 	13. Multi utenza
 	14. Gestione paesaggi
@@ -26,9 +41,10 @@ Indice:
 	22. Simulation
 	23. Exporter/Importer
 
-1. Siti in cui trovare add-ons
+## Sites where to find add-ons <a name="sites_addons"></a>
 
-Official Blender Add-ons
+### Official Blender Add-ons <a name="sites_official"></a>
+
 http://wiki.blender.org/index.php/Extensions:2.6
 Collection with animated gif description and external links for download
 http://blenderaddonlist.blogspot.it/
@@ -37,7 +53,7 @@ https://github.com/search?l=Python&q=blender&type=Repositories&utf8=%E2%9C%93
 Highlight of the best 12 add-ons out there (not so complete and questionable but usefull)
 http://www.blenderguru.com/articles/12-useful-blender-addons-everyone-should-use/
 
-2. Texture Painting
+## 2. Texture Painting
 
 Tool for brush library[!]
 https://www.dropbox.com/s/2tr64y6w7sgolr7/vtools_libraryManager.py?dl=0
@@ -58,7 +74,7 @@ Brushes
 pennelli da importare in modalità “append” dal file blend qui incluso
 https://github.com/xrg81/brushes
 
-3.Vertex Painting
+## 3.Vertex Painting
 
 Oscurart worn edges
 Add-on per dipingere il color per vertex delle mesh in corrispondenza delle zone usurabili di un modello (spigoli esposti etc..). Ottimo per creare delle mappe di usura.
@@ -70,14 +86,14 @@ versione 2 dello stesso (?)
 Transpal
 Geniale strumento per il vertex painting basato su regole visuali e su palettes (anche da Gimp)
 
-4.Sculpting
+## 4.Sculpting
 
 Sculpt Brushes
 Pratica raccolta di pennelli per lo sculpting (si installa dentro Blender e si abilita con un bottone)
 Space view brush
 Con alt+v hai a disposizione tutti i comandi di sculpting
 
-5.Materials
+## 5.Materials
 
 Matalogue
 http://adaptivesamples.com/2015/08/04/introducing-matalogue/
@@ -87,7 +103,7 @@ Display material relations
 Material Converter
 Convertitore di materiali da Blender internal (compresi materiali GLSL tipo photoscan) verso cycles (deprecato nell’ultima versione, si può trovare in Blender Sensei, in un add-on a pagamento di nome zero-brush, presente in questa lista nella sua vecchia versione non a pagamento - sotto painting)
 
-6.PBR materials and painting with Blender and FOSS ecosystem around it
+## 6.PBR materials and painting with Blender and FOSS ecosystem around it
 It is a combo of different tools:
 
 Realtime visualization and editing of PBR materials
@@ -113,7 +129,8 @@ Xnormal - www.xnormal.net/ - open source, baker efficiente da hipoly a low poly 
 Awesome Bump - http://awesomebump.besaba.com/ - open source, permette di elaborare mappe metallic e roughtness (PBR-metallic flavour) in modalità automatica o semi-automatica, (MAC, WIN, LINUX). Crasha con mappe di 8192 :-(
 HDRluminance - qtpfsgui.sourceforge.net - open source, utile per fare hdr a partire da panorami con diversa esposizione (MAC, WIN, LINUX).
 parallels with closed software solutions at  PBR pipeline improvement
-7.Speed up Modelling tasks
+
+## 7.Speed up Modelling tasks
 
 np_station
 https://blenderartists.org/t/addon-np-station/686462
@@ -200,7 +217,7 @@ Multi-object UV edit
 lo fa anche texture atlas, questo è più “diretto”
 https://github.com/ndee85/Multi-Object-UV-Editing
 
-9. Potenziare interfaccia spazio 3D
+## 9. Potenziare interfaccia spazio 3D
 
 Mesh snap utilities line
 
@@ -239,7 +256,7 @@ Apply Shape keys
 Miscellanea di tool
 https://github.com/lapineige/Blender_add-ons.git
 
-10.Baking tools
+## 10.Baking tools
 
 Multibake
 Bakes selected object into individual maps
@@ -250,7 +267,7 @@ Improved baking UI meltdown
 Texture Atlas
 tra gli autori campell barton (non ho capito se è nella versione ufficiale di Blender, spero di si)
 
-11.Integrazione con la fotogrammetria
+## 11.Integrazione con la fotogrammetria
 
 Blender Landscape
 tool per correggere le texture di un modello reality based da fotogrammetria a partire dalla foto non distorte
@@ -258,7 +275,6 @@ https://github.com/zalmoxes-laran/BlenderLandscape
 
 QuipCAM
 Blender OSL shader per modellare dentro allo spazio 3D panorami 360
-
 
 Import bundler 0.3 format
 import del file bundle.out proveniente da bundler (ne esiste una mia versione modificata che mantiene anche i nomi delle camere - fatta per Enzo)
@@ -271,7 +287,12 @@ io mesh xyz
 Importare ed esportare un file con triplette di posizione (e generare una nuvola di punti)
 http://wiki.blender.org/index.php/Extensions:2.6/Py/Scripts/Import-Export/XYZ
 
-12.Compositor
+3D Gaussian Splatting (Added 2024-03-05)
+Able to import 3DGS dataset and create visualizations (slow with large scenes)
+https://github.com/ReshotAI/gaussian-splatting-blender-addon
+
+
+## 12.Compositor
 
 Blenderquick compositor 
 strumenti per la compositazione rapida in Blender
@@ -317,7 +338,7 @@ Sun position
 Osg Export
 https://github.com/cedricpinson/osgexport
 
-15. Camera e Rendering (statico e video)
+## 15. Camera e Rendering (statico e video)
 
 Real Camera
 Effetti per il rendering realistico
@@ -368,7 +389,7 @@ Blend library
 https://wiki.blender.org/index.php/Extensions:2.6/Py/Scripts/Import-Export/Blend_Library
 variante (?)
 
-	18. Coding
+## 18. Coding
 
 Importer XML
 
@@ -376,7 +397,7 @@ Code autocomplete
 ottimo addon per sviluppare addon
 https://github.com/JacquesLucke/code_autocomplete/releases/tag/code_autocomplete_v2a
 
-Temi belli per Blender
+## Temi belli per Blender
 
 
 Startup file and configuration
@@ -384,7 +405,7 @@ Startup file and configuration
 
 (to be copied in C:\Users\[USER]\AppData\Roaming\Blender Foundation\Blender\2.77\config
 
-	21. A pagamento
+## 21. Non free
 
 ProLightSkies:  ottimo per fare illuminazione di esterni foto-realistica)
 Color master: ottimo addon per color correction, ha una ricca sezione di thumbnails per fare fast preview delle configurazioni.
@@ -408,7 +429,7 @@ Shader per Allegoritmic
 bpainter: monumentale addon per Blender
 
 
-	22. Simulation
+## 22. Simulation
 Modeling-Cloth
 ottimo add-on per modellare e simulare tessuti
 https://github.com/the3dadvantage/Modeling-Cloth
@@ -417,7 +438,7 @@ Ocupe Projectors
 Ottimo add-on pr simulare la proiezione su superfici nello spazio 3D
 https://github.com/Ocupe/Projectors
 
-	23. Exporter/Importer
+## 23. Exporter/Importer
 https://github.com/KhronosGroup/glTF-Blender-Exporter
 http://renderhjs.net/fbxbundle/
 ![Uploading image.png…]()
