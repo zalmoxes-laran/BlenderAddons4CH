@@ -1,45 +1,32 @@
 # BlenderAddons4CH
 Addons Blender for Cultural Heritage
 
-# Table of contents
+## Table of contents
 1. [Sites where to find add-ons](#sites_addons)
     1. [Official](#sites_official)
 
-2. [Some paragraph](#paragraph1)
-3. [Another paragraph](#paragraph2)
-
-
-
-## Some paragraph <a name="paragraph1"></a>
-The first paragraph text
-
-## Another paragraph <a name="paragraph2"></a>
-The second paragraph text
-
-Indice:
-	1. Sites where to find add-ons
-	2. Texture painting
-	3. Vertex Painting
-	4. Sculpting
-	5. Materials
-	6. PBR materials
-	7. Speed up Modelling tasks e modellazione procedurale
-	8. UV mapping tools
-	9. Potenziare interfaccia spazio 3D
-	10. Baking tools
-	11. Integrazione con la fotogrammetria e 3DSGS
-	12. Compositor
-	13. Multi utenza
-	14. Gestione paesaggi
-	15. Camera e Rendering (statico)
-	16. Animation
-	17. Connessione a librerie esterne
-	18. Code Snippets
-	19. Temi belli per Blender
-	20. Startup file and configuration
-	21. Acquistati
-	22. Simulation
-	23. Exporter/Importer
+2. Texture painting
+3. Vertex Painting
+4. Sculpting
+5. Materials
+6. PBR materials
+7. Speed up Modelling tasks e modellazione procedurale
+8. UV mapping tools
+9. Potenziare interfaccia spazio 3D
+10. Baking tools
+11. Integrazione con la fotogrammetria e 3DSGS
+12. Compositor
+13. Multi utenza
+14. Gestione paesaggi
+15. Camera e Rendering (statico)
+16. Animation
+17. Connessione a librerie esterne
+18. Code Snippets
+19. Temi belli per Blender
+20. Startup file and configuration
+21. Acquistati
+22. Simulation
+23. Exporter/Importer
 
 ## Sites where to find add-ons <a name="sites_addons"></a>
 
