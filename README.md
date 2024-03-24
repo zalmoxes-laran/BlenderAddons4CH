@@ -278,6 +278,9 @@ http://wiki.blender.org/index.php/Extensions:2.6/Py/Scripts/Import-Export/XYZ
 Able to import 3DGS dataset and create visualizations (slow with large scenes)
 https://github.com/ReshotAI/gaussian-splatting-blender-addon
 
+Photogrammetry Importer (added 2024-03-24)
+Ottimo software per importare soluzioni fotogrammetriche
+https://github.com/SBCV/Blender-Addon-Photogrammetry-Importer
 
 ## 12.Compositor
 
