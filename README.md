@@ -16,7 +16,7 @@ Addons Blender for Cultural Heritage
 10. [Baking tools](#baking_tools)
 11. [Integration with photogrammetry and 3DSGS](#fotogrammetria_integrazione)
 12. [Compositor](#compositor)
-13. [Multi-user](#multi_utenza)
+13. [Multi-user](#multi_user)
 14. [Landscape Management](#gestione_paesaggi)
 15. [Camera and Rendering (static and video)](#camera_rendering)
 16. [Animation](#animation)
@@ -269,13 +269,13 @@ intelligente sistema per campionare una serie di valori colore per una color ram
 https://blenderartists.org/forum/showthread.php?401806-Addon-v1-2-ColorRamp-Dropper-easily-select-color-values-for-ColorRamp-nodes&p=3071567#post3071567
 https://github.com/qwenger/BAddons/tree/master/Node_ColorRampDropper
 
-## 13.Multi-user work in Blender
+## 13.Multi-user work in Blender <a name="multi_user"></a>
 
 Verse 2
 server + client per modellare a distanza nello stesso spazio 3D
 https://github.com/verse/verse-blender 
 
-## 14.Landscape Management
+## 14.Landscape Management <a name="gestione_paesaggi"></a>
 
 Blender GIS
 https://github.com/domlysz/BlenderGIS.git
@@ -292,7 +292,7 @@ Sun position
 Osg Export
 https://github.com/cedricpinson/osgexport
 
-## 15. Camera and Rendering (statico e video)
+## 15. Camera and Rendering (statico e video) <a name="camera_rendering"></a>
 
 Real Camera
 Effetti per il rendering realistico
@@ -309,7 +309,7 @@ Script per creare una camera che ruota intorno ad un oggetto
 https://github.com/Antonioya/blender
 
 
-## 16.Animation
+## 16.Animation <a name="animation"></a>
 
 Blender-power-sequencer
 Blender's video sequencer has a lot of potential, but it lacks essential tools for content creators to edit videos efficiently.
@@ -327,7 +327,7 @@ VSE logging system
 
 Particle morphing tools (deprecated in last versions)
 
-## 17.Connection to external libraries
+## 17.Connection to external libraries <a name="connessione_librerie"></a>
 
 Blender Cloud texture
 Add-on per usare out of the box le texture da Blender Cloud (richiede account Blender ID e subscription)
@@ -336,7 +336,7 @@ Blend library
 https://wiki.blender.org/index.php/Extensions:2.6/Py/Scripts/Import-Export/Blend_Library
 variante (?)
 
-## 18.Coding
+## 18.Coding <a name="code_snippets"></a>
 
 Importer XML
 
@@ -344,15 +344,14 @@ Code autocomplete
 ottimo addon per sviluppare addon
 https://github.com/JacquesLucke/code_autocomplete/releases/tag/code_autocomplete_v2a
 
-## 19.Temi belli per Blender
+## 19.Temi belli per Blender <a name="temi_belli"></a>
 
 
-Startup file and configuration
-
+## 19.Startup file and configuration <a name="startup_file"></a>
 
 (to be copied in C:\Users\[USER]\AppData\Roaming\Blender Foundation\Blender\2.77\config
 
-## 21. Non free
+## 21. Non free <a name="acquistati"></a>
 
 ProLightSkies:  ottimo per fare illuminazione di esterni foto-realistica)
 Color master: ottimo addon per color correction, ha una ricca sezione di thumbnails per fare fast preview delle configurazioni.
@@ -375,7 +374,7 @@ Ottimo addon per visualizzare le geometrie nascoste dietro ad alre geometrie (fa
 Shader per Allegoritmic
 bpainter: monumentale addon per Blender
 
-## 22. Simulation
+## 22. Simulation. <a name="simulation"></a> 
 Modeling-Cloth
 ottimo add-on per modellare e simulare tessuti
 https://github.com/the3dadvantage/Modeling-Cloth
@@ -384,7 +383,7 @@ Ocupe Projectors
 Ottimo add-on pr simulare la proiezione su superfici nello spazio 3D
 https://github.com/Ocupe/Projectors
 
-## 23. Exporter/Importer
+## 23. Exporter/Importer. <a name="exporter_importer"></a> 
 https://github.com/KhronosGroup/glTF-Blender-Exporter
 http://renderhjs.net/fbxbundle/
 ![Uploading image.png…]()
