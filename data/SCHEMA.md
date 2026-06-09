@@ -26,14 +26,18 @@ Run `npm run gen` to regenerate.
 | `tags` | string[] | – | CH use-cases / keywords (colmap, metashape, lidar, …) |
 | `links` | {label,url}[] | – | External links; `url` must be a valid URL |
 | `summary` | string | ✅ | One-line description shown on cards |
+| `image` | string | – | Optional screenshot/diagram path (e.g. `files/foo.png`) |
 
 ## `category` enum
 
-`photogrammetry`, `point-cloud`, `gaussian-splatting`, `bim-hbim`, `modelling`,
-`retopology`, `uv`, `texturing`, `materials`, `sculpting`, `vertex-paint`,
-`baking`, `rendering`, `camera`, `animation`, `compositor`, `gis-landscape`,
-`simulation`, `exchange`, `documentation`, `interface`, `coding`, `libraries`,
-`themes`, `misc`.
+Categories are **section-aligned** (one category ≈ one catalog section):
+`sites`, `texturing`, `vertex-paint`, `sculpting`, `materials`, `pbr`,
+`modelling`, `retopology`, `uv`, `interface`, `baking`, `photogrammetry`,
+`point-cloud`, `gaussian-splatting`, `compositor`, `multiuser`, `gis-landscape`,
+`camera`, `rendering`, `animation`, `libraries`, `coding`, `themes`, `paid`,
+`simulation`, `exchange`, `derived-data`, `bim-hbim`, `documentation`, `misc`.
+
+Section order, titles, anchors and intros live in `data/sections.mjs`.
 
 The machine-readable Zod version lives in `data/schema.ts` (ready to drop into
 the Astro site's content config).

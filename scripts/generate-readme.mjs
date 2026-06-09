@@ -1,40 +1,28 @@
 #!/usr/bin/env node
 // =============================================================
-// generate-readme.mjs — render catalog data into Markdown
+// generate-readme.mjs — render the full README from catalog data
 // =============================================================
-// GRADE 1 (proof of concept): reads data/addons/*.md and renders the
-// "section 11" block (photogrammetry / point-cloud / gaussian-splatting)
-// into data/_preview/section-11.md so you can see the shape before the full
-// README/site migration.
+// Source of truth:
+//   - data/addons/*.md   → per-tool entries (grouped by `category`)
+//   - data/sections.mjs  → section order, titles, anchors, intro/outro prose
 //
-// Source of truth = data/addons/*.md. Edit those, then `npm run gen`.
+// Output: README.md (overwritten). Edit the data, not the README.
+// Run: `npm run gen`
 // =============================================================
 
-import { readFileSync, writeFileSync, readdirSync, mkdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 import matter from 'gray-matter';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const ADDONS_DIR = join(ROOT, 'data', 'addons');
-const OUT_DIR = join(ROOT, 'data', '_preview');
-const OUT_FILE = join(OUT_DIR, 'section-11.md');
-
-// --- ordered category display config (PoC: the 3 section-11 categories) ---
-const SECTION = {
-  title: '## 11. Photogrammetry, point clouds and 3D Gaussian Splatting',
-  categories: [
-    { key: 'photogrammetry', title: '### Photogrammetry import' },
-    { key: 'point-cloud', title: '### Point-cloud import' },
-    { key: 'gaussian-splatting', title: '### 3D Gaussian Splatting (3DGS)' },
-  ],
-};
+const OUT_FILE = join(ROOT, 'README.md');
 
 const REQUIRED = ['name', 'slug', 'category', 'platform', 'status', 'lastVerified', 'summary'];
 const STATUS_RANK = { maintained: 0, unknown: 1, legacy: 2, dead: 3 };
 
-// --- load + light validation ---
-function load() {
+function loadAddons() {
   const files = readdirSync(ADDONS_DIR).filter((f) => f.endsWith('.md'));
   const addons = [];
   const problems = [];
@@ -45,75 +33,93 @@ function load() {
         problems.push(`${file}: missing required field "${k}"`);
       }
     }
-    const expectedSlug = file.replace(/\.md$/, '');
-    if (data.slug && data.slug !== expectedSlug) {
-      problems.push(`${file}: slug "${data.slug}" != filename "${expectedSlug}"`);
+    const expected = file.replace(/\.md$/, '');
+    if (data.slug && data.slug !== expected) {
+      problems.push(`${file}: slug "${data.slug}" != filename "${expected}"`);
     }
     for (const l of data.links ?? []) {
-      try {
-        new URL(l.url);
-      } catch {
-        problems.push(`${file}: invalid url "${l?.url}"`);
-      }
+      try { new URL(l.url); } catch { problems.push(`${file}: invalid url "${l?.url}"`); }
     }
     addons.push(data);
   }
   return { addons, problems };
 }
 
-// --- render one tool as a Markdown bullet ---
+function bySort(a, b) {
+  if (!!a.recommended !== !!b.recommended) return a.recommended ? -1 : 1;
+  const s = (STATUS_RANK[a.status] ?? 9) - (STATUS_RANK[b.status] ?? 9);
+  if (s) return s;
+  return a.name.localeCompare(b.name);
+}
+
 function renderAddon(a) {
   const badges = [];
   if (a.recommended) badges.push('✅ **recommended**');
   if (a.status === 'legacy') badges.push('*(legacy)*');
   if (a.status === 'dead') badges.push('⚠️ *(dead)*');
   if (a.status === 'unknown') badges.push('*(status unverified)*');
+  if (a.platform === 'standalone') badges.push('`standalone`');
+  if (a.platform === 'web') badges.push('`web`');
   if (a.blenderVersion) badges.push(`Blender ${a.blenderVersion}`);
   if (a.license) badges.push(a.license);
   if (a.emPipeline) badges.push('`EM pipeline`');
 
-  const head = `**${a.name}**`;
   const tail = badges.length ? ` — ${badges.join(' · ')}` : '';
   const links = (a.links ?? []).length
     ? ' ' + a.links.map((l) => `[${l.label}](${l.url})`).join(' · ')
     : '';
-  return `- ${head}${tail}\n  ${a.summary}${links}`;
+  const lines = [`- **${a.name}**${tail}`, `  ${a.summary}${links}`];
+  if (a.image) lines.push('', `  ![${a.name}](<${a.image}>)`);
+  return lines.join('\n');
 }
 
-function bySort(a, b) {
-  if (!!b.recommended - !!a.recommended) return b.recommended ? 1 : -1;
-  const s = (STATUS_RANK[a.status] ?? 9) - (STATUS_RANK[b.status] ?? 9);
-  if (s) return s;
-  return a.name.localeCompare(b.name);
+function renderList(addons, category) {
+  const items = addons.filter((a) => a.category === category).sort(bySort);
+  return items.map(renderAddon);
 }
 
-function main() {
-  const { addons, problems } = load();
+async function main() {
+  const { meta, sections } = await importSections();
+  const { addons, problems } = loadAddons();
   if (problems.length) {
     console.error('⚠️  Validation problems:\n' + problems.map((p) => '  - ' + p).join('\n'));
   }
 
-  const lines = [
-    SECTION.title,
-    '',
-    '> Generated from `data/addons/*.md` — do not edit by hand. Run `npm run gen`.',
-    '',
-  ];
-  let count = 0;
-  for (const cat of SECTION.categories) {
-    const items = addons.filter((a) => a.category === cat.key).sort(bySort);
-    if (!items.length) continue;
-    lines.push(cat.title, '');
-    for (const a of items) {
-      lines.push(renderAddon(a));
-      count++;
+  const out = [];
+  out.push(`# ${meta.title}`, '', meta.tagline, '', meta.intro, '');
+
+  // Table of contents
+  out.push('## Table of contents', '');
+  for (const s of sections) out.push(`${s.n}. [${s.title}](#${s.anchor})`);
+  out.push('');
+
+  // Sections
+  let toolCount = 0;
+  for (const s of sections) {
+    out.push(`## ${s.n}. ${s.title} <a name="${s.anchor}"></a>`, '');
+    if (s.intro) out.push(s.intro, '');
+
+    if (!s.noTools) {
+      const subs = s.subsections ?? (s.category ? [{ category: s.category }] : []);
+      for (const sub of subs) {
+        if (sub.title) out.push(`### ${sub.title}`, '');
+        const rendered = renderList(addons, sub.category);
+        toolCount += rendered.length;
+        if (rendered.length) out.push(...rendered, '');
+      }
     }
-    lines.push('');
+    if (s.outro) out.push(s.outro, '');
   }
 
-  mkdirSync(OUT_DIR, { recursive: true });
-  writeFileSync(OUT_FILE, lines.join('\n').trimEnd() + '\n', 'utf8');
-  console.log(`✅ Rendered ${count} tools → ${OUT_FILE.replace(ROOT + '/', '')}`);
+  out.push('---', '', `*Generated from ${addons.length} catalog entries. Last link verification: 2026-06-09.*`);
+
+  writeFileSync(OUT_FILE, out.join('\n').replace(/\n{3,}/g, '\n\n').trimEnd() + '\n', 'utf8');
+  console.log(`✅ README.md generated — ${sections.length} sections, ${toolCount} tool listings, ${addons.length} data files.`);
 }
 
-main();
+async function importSections() {
+  const mod = await import(pathToFileURL(join(ROOT, 'data', 'sections.mjs')).href);
+  return { meta: mod.meta, sections: mod.sections };
+}
+
+await main();

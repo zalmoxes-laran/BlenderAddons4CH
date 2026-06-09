@@ -1,13 +1,18 @@
 # BlenderAddons4CH
 
-Blender add-ons for Cultural Heritage — a curated list of tools useful for documentation, modelling, photogrammetry, point clouds and visualization in CH workflows.
+Blender add-ons for Cultural Heritage — a curated catalog of tools useful for documentation, modelling, photogrammetry, point clouds and visualization in CH workflows.
 
-> **Link status:** all links were verified on **2026-06-09**. Entries whose original link was dead are marked with ⚠️ and, where possible, point to the current home of the tool.
+> **Link status:** all links were verified on **2026-06-09**. Entries whose original
+> link was dead are marked `dead`/`legacy` and, where possible, point to the current
+> home of the tool.
+>
+> **This README is generated** from `data/addons/*.md` via `npm run gen` — do not edit
+> it by hand. Edit the per-tool data files instead. Long-form notes live in each tool's
+> Markdown body and surface on the companion site.
 
 ## Table of contents
 
 1. [Sites where to find add-ons](#sites_addons)
-    1. [Official Blender add-ons](#sites_official)
 2. [Texture painting](#texture_painting)
 3. [Vertex painting](#vertex_painting)
 4. [Sculpting](#sculpting)
@@ -19,7 +24,7 @@ Blender add-ons for Cultural Heritage — a curated list of tools useful for doc
 10. [Baking tools](#baking_tools)
 11. [Photogrammetry, point clouds and 3D Gaussian Splatting](#photogrammetry)
 12. [Compositor](#compositor)
-13. [Multi-user](#multi_user)
+13. [Multi-user work in Blender](#multi_user)
 14. [Landscape management](#landscape)
 15. [Camera and rendering (static and video)](#camera_rendering)
 16. [Animation](#animation)
@@ -35,192 +40,298 @@ Blender add-ons for Cultural Heritage — a curated list of tools useful for doc
 
 ## 1. Sites where to find add-ons <a name="sites_addons"></a>
 
-### Official Blender add-ons <a name="sites_official"></a>
-
-- [Blender Extensions Platform](https://extensions.blender.org/) — the official, current source for Blender add-ons (replaces the old `wiki.blender.org/Extensions:2.6`, which is now offline).
-- [Blender Add-on List](http://blenderaddonlist.blogspot.it/) — collection with animated GIF descriptions and external download links (now largely outdated).
-- [GitHub search: Blender + Python](https://github.com/search?l=Python&q=blender&type=Repositories&utf8=%E2%9C%93) — keyword-based search (1700+ add-ons).
-- "12 useful Blender add-ons everyone should use" (blenderguru.com) — ⚠️ original article dead (June 2026).
+- **Blender Extensions Platform** — `web`
+  The official, current source for Blender add-ons (replaces the offline wiki.blender.org/Extensions:2.6). [Website](https://extensions.blender.org/)
+- **GitHub search: Blender + Python** — `web`
+  Keyword search across 1700+ Blender/Python repositories. [Search](https://github.com/search?l=Python&q=blender&type=Repositories&utf8=%E2%9C%93)
+- **Blender Add-on List** — *(legacy)* · `web`
+  Collection with animated-GIF descriptions and download links (now largely outdated). [Website](http://blenderaddonlist.blogspot.it/)
+- **12 useful Blender add-ons (Blender Guru)** — ⚠️ *(dead)* · `web`
+  Old listicle — the original article is offline (June 2026).
 
 ## 2. Texture painting <a name="texture_painting"></a>
 
-- **Brush library manager**: [Download](https://www.dropbox.com/s/2tr64y6w7sgolr7/vtools_libraryManager.py?dl=0)
-- **Texture from Image**
-- **Texture Paint Plus**: originally written by Bart Crouch (author of the Sketchfab exporter, among other things) and later extended by two more artists/developers. A useful tool for painting in Blender. [Download](https://github.com/artistCDMJ/texture_paint_plus/archive/master.zip)
-- **Texture Presets**: handy add-on for quickly creating images at known power-of-two sizes (1024 / 2048 / 4096).
-- **Zero Brush**: old version (when the stand-alone version was still free; nowadays you need the whole Sensei-free pack, which is VERY invasive).
-- **Brushes**: brushes to import in "append" mode from the included blend file. [Download](https://github.com/xrg81/brushes)
+- **Brush library manager** — *(legacy)*
+  Manager script for a brush library. [Download](https://www.dropbox.com/s/2tr64y6w7sgolr7/vtools_libraryManager.py?dl=0)
+- **Brushes (xrg81)** — *(legacy)*
+  Brushes to append from a blend file. [Download](https://github.com/xrg81/brushes)
+- **Texture from Image** — *(legacy)*
+  Create a texture from an image.
+- **Texture Paint Plus** — *(legacy)*
+  Texture-paint helpers by Bart Crouch et al. [Download](https://github.com/artistCDMJ/texture_paint_plus/archive/master.zip)
+- **Texture Presets** — *(legacy)*
+  Quickly create images at power-of-two sizes (1024/2048/4096).
+- **Zero Brush** — *(legacy)*
+  Old free version of Zero Brush (now part of the invasive Sensei-free pack).
 
 ## 3. Vertex painting <a name="vertex_painting"></a>
 
-- **Oscurart Worn Edges**: add-on for painting per-vertex color on meshes at wear areas of a model (exposed edges, etc.). Great for creating wear maps.
-- **Slope**: replaces the active vertex group or vertex-color layer with values representing the slope of a face (now also available in BlenderGIS). A "version 2" of the same also exists (?).
-- **Transpal**: brilliant tool for vertex painting based on visual rules and palettes (also from GIMP).
+- **Oscurart Worn Edges** — *(legacy)*
+  Paint per-vertex color at wear areas (exposed edges) — great for wear maps.
+- **Slope** — *(legacy)*
+  Write face-slope values to a vertex group / color layer (also in BlenderGIS).
+- **Transpal** — *(legacy)*
+  Vertex painting from visual rules and palettes (incl. from GIMP).
 
 ## 4. Sculpting <a name="sculpting"></a>
 
-- **Sculpt Brushes**: handy collection of sculpting brushes (installed inside Blender and enabled with a button).
-- **Space View Brush**: with Alt+V you get all sculpting commands at hand.
+- **Sculpt Brushes** — *(legacy)*
+  Collection of sculpting brushes, enabled with a button.
+- **Space View Brush** — *(legacy)*
+  Alt+V exposes all sculpting commands at hand.
 
 ## 5. Materials <a name="materials"></a>
 
-- **Matalogue**: [Website](http://adaptivesamples.com/2015/08/04/introducing-matalogue/)
-- **Display Material Relations**
-- **Material Converter**: converts materials from Blender Internal (including GLSL materials such as Photoscan ones) to Cycles. Deprecated in recent versions; it can be found in Blender Sensei and in the paid add-on Zero Brush (listed here in its old, free version under "Texture painting").
+- **Display Material Relations** — *(legacy)*
+  Visualize material relations.
+- **Matalogue** — *(legacy)*
+  Quickly jump between materials/node trees and scenes. [Website](http://adaptivesamples.com/2015/08/04/introducing-matalogue/)
+- **Material Converter** — ⚠️ *(dead)*
+  Converted Blender Internal (incl. Photoscan GLSL) materials to Cycles — deprecated.
 
 ## 6. PBR materials and the FOSS ecosystem around Blender <a name="pbr_materials"></a>
 
-- **Real-time visualization and editing of PBR materials**: the Blender PBR branch by Clément Foucault — [clement-foucault.com](http://www.clement-foucault.com/). This work was long ago merged into Blender (it became EEVEE).
+- **AwesomeBump** — `standalone`
+  Open-source generator of metallic/roughness PBR maps. [GitHub](https://github.com/kmkolasinski/AwesomeBump)
+- **Luminance HDR** — `standalone`
+  Open-source HDR creation from bracketed exposures/panoramas (ex-qtpfsgui).
+- **Real-time PBR (Clément Foucault branch)**
+  The PBR branch by C. Foucault — long since merged into Blender as EEVEE. [Website](http://www.clement-foucault.com/)
+- **Blender Brit (PBR node pack)** — *(legacy)*
+  Free PBR node pack (after Cynicat & Blender Guru). [Website](http://www.blenderbrit.co.uk/free-tool-pbr-node-pack/)
+- **PBR (Substance-style)** — *(legacy)*
+  PBR material inspired by Substance; works with any metallic-roughness pipeline.
+- **PBR Node v1.5** — *(legacy)*
+  A PBR node group.
+- **PBR setup (after Cynicat)** — *(legacy)*
+  A PBR setup made following Cynicat's tutorials.
+- **PBR workflows in Cycles (Sairiala thesis)** — *(legacy)*
+  Bachelor's thesis on PBR workflows in Cycles (Sairiala, 2015).
+- **Shader Library** — *(legacy)*
+  A shader library.
+- **UE4 Shader** — *(legacy)*
+  UE4-style shader.
+- **xNormal** — *(legacy)* · `standalone`
+  High-to-low-poly map baker for many map types (Windows).
+- **easyPBR shader** — ⚠️ *(dead)*
+  PBR material node — original CG Cookie market link dead (marketplace closed).
+- **Mega Shader (Stefano Scarioni)** — ⚠️ *(dead)*
+  CC-BY mega shader — original link dead (June 2026).
 
-Materials / PBR shaders:
-- easyPBR shader — ⚠️ original link (cgcookiemarkets.com) dead, the CG Cookie marketplace closed (June 2026).
-- UE4 Shader
-- Shader Library
-- PBR material inspired by the Substance material editor (works well with any metallic-roughness pipeline)
-- PBR Node v1.5
-- A PBR setup made by me following Cynicat
-- **Blender Brit** (following tips from Cynicat and Blender Guru): [blenderbrit.co.uk](http://www.blenderbrit.co.uk/free-tool-pbr-node-pack/)
-- **Mega Shader** by Stefano Scarioni, CC-BY — ⚠️ original link dead (June 2026).
-- Bachelor's thesis on PBR in Blender — Sairiala, 2015, *PBR workflows in Cycles Render Engine*.
-
-**FOSS ecosystem around Blender to improve the paint/sculpt/PBR pipeline:**
-- **xNormal** — open source; efficient baker from high-poly to low-poly for MANY map types (WIN). A bit slow (the CUDA option that should make it VERY fast crashes for me).
-- **AwesomeBump** — open source; lets you process metallic and roughness maps (PBR-metallic flavour) automatically or semi-automatically (MAC, WIN, LINUX). Crashes with 8192 maps :-( — now at [github.com/kmkolasinski/AwesomeBump](https://github.com/kmkolasinski/AwesomeBump) (the old `awesomebump.besaba.com` is offline).
-- **Luminance HDR** (formerly qtpfsgui) — open source; useful for making HDR from panoramas with different exposures (MAC, WIN, LINUX).
-
-These provide open parallels to closed-source software solutions for improving the PBR pipeline.
+Standalone tools (marked `standalone`) are open companions to closed-source solutions for improving the PBR pipeline.
 
 ## 7. Speed up modelling and procedural modelling <a name="speedup_modelling"></a>
 
-- **np_station**: [Forum thread](https://blenderartists.org/t/addon-np-station/686462)
-- **Cutaway material** (for sectioning): [Blog post](https://blendbits.blogspot.it/2017/02/the-cutaway-shader-free-blender-add-on.html)
-- **Mesh Align Plus**: [Releases](https://github.com/egtwobits/mesh-align-plus/releases)
-- **Selective Unhide**: [GitHub](https://github.com/RayMairlot/Selective-Unhide)
-- **Snap Advanced**
-- **Drop to Ground**: drops selected objects onto the active object.
-- **Planarizer**: corrects non-planar quads / coplanarizes the selected faces (based on the faces' median normal).
-- **Rotation Constrained**
+### Modelling
 
-![Rotation constrained](<files/tip rotation constrained.png>)
+- **Mesh Align Plus**
+  Precise alignment by picking geometry features. [Releases](https://github.com/egtwobits/mesh-align-plus/releases)
+- **Modular Tree**
+  Procedural tree generator (v3). [Releases](https://github.com/MaximeHerpin/modular_tree/releases)
+- **Sverchok**
+  Powerful node system for procedural/parametric modelling. [GitHub](https://github.com/nortikin/sverchok)
+- **Circumferences from three points** — *(legacy)*
+  Build a circumference from three points.
 
-- **Circumferences from three points**
+  ![Circumferences from three points](<files/3points.png>)
+- **Cutaway material** — *(legacy)*
+  Cutaway shader for sectioning models. [Blog](https://blendbits.blogspot.it/2017/02/the-cutaway-shader-free-blender-add-on.html)
+- **Drop to Ground** — *(legacy)*
+  Drops selected objects onto the active object.
+- **Floorboard generator** — *(legacy)*
+  Generates floorboards.
+- **Geodesic distance between points** — *(legacy)*
+  Measure distances along geodesic paths on a surface. [Article](http://www.blendernation.com/2016/03/03/calculating-distances-two-points-using-geodesic-paths/)
+- **Intersection** — *(legacy)*
+  Add the intersection with another mesh to the active object.
+- **Laser Slicer 0.7** — *(legacy)*
+  Make cross-sections and export an SVG for laser cutting.
+- **np_station** — *(legacy)*
+  Precision drawing and placement workflow tools. [Forum](https://blenderartists.org/t/addon-np-station/686462)
+- **Object Cross Section** — *(legacy)*
+  Create cross-sections using the active object as cut plane.
+- **Planarizer** — *(legacy)*
+  Coplanarizes selected faces (median normal); fixes non-planar quads.
+- **Rotation Constrained** — *(legacy)*
+  Constrained-rotation helper.
 
-![Three points](files/3points.png)
+  ![Rotation Constrained](<files/tip rotation constrained.png>)
+- **Selective Unhide** — *(legacy)*
+  Selectively unhide hidden objects. [GitHub](https://github.com/RayMairlot/Selective-Unhide)
+- **Snap Advanced** — *(legacy)*
+  Advanced snapping helpers.
 
-- **Object Cross Section**: creates cross-section(s) of the selected object(s) using the active object as the cutting plane.
-- **Laser Slicer 0.7**: makes a series of cross-sections and exports an SVG file for laser cutting.
-- **Intersection**: adds to the active object's mesh its intersection with another mesh object.
+### Retopology / hard-surface modelling
 
-Retopology / hard-surface modelling:
-- **Box Cutter**: [Update notes](https://masterxeon1001.com/2016/05/28/box-cutter-4-update-notes/)
-- **Blender Carver**
-- **Blender Rebool**
-- **Booltron** (Boolean add-on)
-- **Bool Tool**: tool for direct booleans as well as via modifier (not super useful..). [Code](https://github.com/vitorbalbio/code)
-- [Calculating distances between two points using geodesic paths](http://www.blendernation.com/2016/03/03/calculating-distances-two-points-using-geodesic-paths/)
-- **Sverchok**: very powerful node system for procedural modelling. [GitHub](https://github.com/nortikin/sverchok)
-- **Floorboard generator**: generates floorboards.
-- **Modular Tree**: great add-on for creating procedural trees; now in its third version. [Releases](https://github.com/MaximeHerpin/modular_tree/releases)
+- **Blender Carver** — *(legacy)*
+  Carving / boolean modelling tools.
+- **Blender Rebool** — *(legacy)*
+  Repeated-boolean helper.
+- **Bool Tool** — *(legacy)*
+  Direct booleans as well as via modifier. [Code](https://github.com/vitorbalbio/code)
+- **Booltron** — *(legacy)*
+  Boolean add-on (union/difference/intersect on groups).
+- **Box Cutter** — *(legacy)*
+  Fast cutting/boolean hard-surface workflow. [Notes](https://masterxeon1001.com/2016/05/28/box-cutter-4-update-notes/)
 
 ## 8. UV mapping tools <a name="uv_mapping"></a>
 
-- **TexTools for Blender**: [Bitbucket](https://bitbucket.org/renderhjs/textools-blender/)
-- **Sure UV**: tool for quick UV mapping for architecture. [Blender developer file](https://developer.blender.org/F18724), [forum thread](http://blenderartists.org/forum/showthread.php?236631-Addon-Simple-Box-UVW-Map-Modifier)
-- **Magic UV**: nice tool for editing UVs; an interesting feature is the bounding box in UV space. [GitHub](https://github.com/nutti/Magic-UV)
-- **Move UV**: move UVs from the 3D view.
-- **UV Squares**: [GitHub](https://github.com/Radivarig/UvSquares/), [video](https://www.youtube.com/watch?v=oklmDQx17HI&feature=youtu.be)
-- **Multi-Object UV Editing**: Texture Atlas does this too, but this one is more "direct". [GitHub](https://github.com/ndee85/Multi-Object-UV-Editing)
+- **Magic UV**
+  UV editing helpers; includes a bounding box in UV space. [GitHub](https://github.com/nutti/Magic-UV)
+- **Move UV** — *(legacy)*
+  Move UVs from the 3D view.
+- **Multi-Object UV Editing** — *(legacy)*
+  Edit UVs across multiple objects. [GitHub](https://github.com/ndee85/Multi-Object-UV-Editing)
+- **Sure UV** — *(legacy)*
+  Quick box/cube UV mapping for architecture. [Dev file](https://developer.blender.org/F18724) · [Forum](http://blenderartists.org/forum/showthread.php?236631-Addon-Simple-Box-UVW-Map-Modifier)
+- **TexTools for Blender** — *(legacy)*
+  UV/texture toolset (baking, layout, checker maps). [Bitbucket](https://bitbucket.org/renderhjs/textools-blender/)
+- **UV Squares** — *(legacy)*
+  Reshape UV faces into grids/squares. [GitHub](https://github.com/Radivarig/UvSquares/) · [Video](https://www.youtube.com/watch?v=oklmDQx17HI&feature=youtu.be)
 
 ## 9. Enhance the 3D viewport interface <a name="interface_3d"></a>
 
-- **Mesh Snap Utilities Line**
-- **Screencast**
-- **Various tools** including a Modifier Manager
-- **Enhanced 3D Cursor**
-- **Shading menu in header**
-- **MeasureIt**: [Blender Extensions](https://extensions.blender.org/add-ons/measureit/) — now bundled with Blender (Edit ▸ Preferences ▸ Add-ons). The old `Antonioya/blender/measureit` path is gone, but the [author's repo](https://github.com/Antonioya/blender) still exists.
-- **Add Dimension**: sets the length of an edge arbitrarily.
-- **Amaranth Toolset**: [Blender Extensions](https://extensions.blender.org/add-ons/amaranth/) (the old `pablovazquez.org/amaranth` page is dead).
-- **Rename**
-- **Vertex Index Viewer**: ⚠️ original Blender-wiki link dead; equivalent functionality is now built into Blender (enable *Developer Extras* and the index overlays).
-- **Is Key Free**: finds an unused key for a shortcut.
-- **Apply Shape Keys**
-- **Miscellaneous tools**: [github.com/lapineige/Blender_add-ons](https://github.com/lapineige/Blender_add-ons.git)
+- **Amaranth Toolset**
+  Production quality-of-life tools (the old pablovazquez.org page is dead). [Blender Extensions](https://extensions.blender.org/add-ons/amaranth/)
+- **MeasureIt**
+  On-screen dimensions/measurements — now bundled in Blender. [Blender Extensions](https://extensions.blender.org/add-ons/measureit/) · [Author repo](https://github.com/Antonioya/blender)
+- **Miscellaneous tools (lapineige)**
+  A miscellany of small useful add-ons. [GitHub](https://github.com/lapineige/Blender_add-ons.git)
+- **Add Dimension** — *(legacy)*
+  Set an edge length arbitrarily.
+- **Apply Shape Keys** — *(legacy)*
+  Helper to apply shape keys.
+- **Enhanced 3D Cursor** — *(legacy)*
+  Extended 3D-cursor controls.
+- **Is Key Free** — *(legacy)*
+  Find an unused key for a shortcut.
+- **Mesh Snap Utilities Line** — *(legacy)*
+  Draw lines with snapping (now partly built into Blender).
+- **Modifier Manager** — *(legacy)*
+  Manage modifiers across objects.
+- **Rename** — *(legacy)*
+  Batch-rename helper.
+- **Screencast Keys** — *(legacy)*
+  Show pressed keys on screen.
+- **Shading menu in header** — *(legacy)*
+  Header shortcut for shading modes.
+- **Vertex Index Viewer** — ⚠️ *(dead)*
+  Show vertex indices — now built in (enable Developer Extras + index overlays).
 
 ## 10. Baking tools <a name="baking_tools"></a>
 
-- **Multibake**: bakes the selected object into individual maps.
-- **Meltdown**: improved baking UI.
-- **Texture Atlas**: among the authors is Campbell Barton (not sure whether it's in the official Blender version — I hope so).
+- **Meltdown** — *(legacy)*
+  Improved baking UI.
+- **Multibake** — *(legacy)*
+  Bake selected objects into individual maps.
+- **Texture Atlas** — *(legacy)*
+  Pack/bake multiple objects into a texture atlas (Campbell Barton et al.).
 
 ## 11. Photogrammetry, point clouds and 3D Gaussian Splatting <a name="photogrammetry"></a>
 
-> This is the core section for Cultural Heritage 3D workflows. The three highlighted areas — **photogrammetric import**, **point-cloud import** and **3D Gaussian Splatting** — were all re-verified on 2026-06-09.
+> This is the core section for Cultural Heritage 3D workflows. The three areas —
+> **photogrammetric import**, **point-cloud import** and **3D Gaussian Splatting** —
+> were all re-verified on 2026-06-09.
 
 ### Photogrammetry import
 
-- **Blender-Addon-Photogrammetry-Importer** (SBCV) — ✅ **actively maintained** (1.3k★, latest release Feb 2026, Blender 5.0.2+). The reference tool for importing photogrammetric reconstructions. Imports cameras and point clouds from **Agisoft Metashape, COLMAP/GLOMAP, Meshroom, MVE, Open3D, OpenSfM, OpenMVG, Regard3D and VisualSFM**, and reads point clouds in PLY/PCD/LAS/LAZ/ASCII (with OpenGL or Geometry Nodes representation). [GitHub](https://github.com/SBCV/Blender-Addon-Photogrammetry-Importer)
-- **3DSC** (3D Survey Collection)
-- **QuipCAM**: Blender OSL shader to model 360° panoramas inside the 3D space.
-- **Import Bundler 0.3 format**: imports the `bundle.out` file produced by Bundler (a modified version of mine also keeps the camera names — made for Enzo).
-- **Panorama Tracker**: tool for stabilizing 360° videos. [GitHub](https://github.com/dfelinto/Panorama-Tracker)
+- **Photogrammetry Importer** — ✅ **recommended** · Blender 5.0.2+ · MIT · `EM pipeline`
+  The reference tool for importing photogrammetric reconstructions (cameras + point clouds) from every major SfM/MVS package. [GitHub](https://github.com/SBCV/Blender-Addon-Photogrammetry-Importer)
+- **3D Survey Collection (3DSC)** — `EM pipeline`
+  Survey/georeferencing toolset for Blender, interoperable with EMTools (shift, EPSG).
+- **QuipCAM** — *(status unverified)*
+  Blender OSL shader to model 360° panoramas inside the 3D space.
+- **Import Bundler (.out)** — *(legacy)*
+  Imports the bundle.out file produced by Bundler.
+- **Panorama Tracker** — *(legacy)*
+  Tool to stabilize 360° videos. [GitHub](https://github.com/dfelinto/Panorama-Tracker)
 
 ### Point-cloud import
 
-- **Point Cloud I/O** — ✅ **recommended modern importer**. Imports/exports E57, PLY, LAS/LAZ, PCD, XYZ and PTS into Blender's native PointCloud object (colors, normals, intensity, classification become point attributes usable in Geometry Nodes). Handles million-point datasets. [Blender Extensions](https://extensions.blender.org/add-ons/point-cloud-io/)
-- **Blender-Import-Point-Cloud-Addon** (SBCV) — imports PLY files as point clouds; from the same author as the Photogrammetry Importer. [GitHub](https://github.com/SBCV/Blender-Import-Point-Cloud-Addon)
-- **io_mesh_xyz** *(legacy)*: imported/exported a file of position triplets to generate a point cloud — ⚠️ original Blender-wiki link dead (June 2026). Use **Point Cloud I/O** above instead.
+- **Point Cloud I/O** — ✅ **recommended** · `EM pipeline`
+  Imports/exports E57, PLY, LAS/LAZ, PCD, XYZ and PTS into Blender's native PointCloud object. [Blender Extensions](https://extensions.blender.org/add-ons/point-cloud-io/)
+- **Blender Import Point Cloud Addon** — `EM pipeline`
+  Imports PLY files as point clouds into Blender. [GitHub](https://github.com/SBCV/Blender-Import-Point-Cloud-Addon)
+- **io_mesh_xyz** — ⚠️ *(dead)*
+  Legacy XYZ importer/exporter — link dead, superseded by Point Cloud I/O.
 
 ### 3D Gaussian Splatting (3DGS)
 
-- **3DGS Render by KIRI Engine** — ✅ **recommended (current)**. Free, full Gaussian-Splat editing and rendering suite (v5.x): imports/edits/renders 3DGS `.ply`, integrates with EEVEE (the only tool with this), supports rigging splats from a proxy mesh and exporting animated 4DGS as `.ply` sequences. Blender 5.1+. [GitHub](https://github.com/Kiri-Innovation/3dgs-render-blender-addon)
-- **Gauss Cannon** (Arash Keshmirian) — ✅ GPL-3, Blender 4.2+. Automates the capture side of 3DGS: places cameras at mesh face centers, ray-traces a point cloud and exports camera paths/point clouds to reconstruction tools (Postshot, Lichtfeld Studio). Useful to generate synthetic training data from a Blender scene. [GitHub](https://github.com/keshmirian/gauss-cannon)
-- **gaussian-splatting-blender-addon** (ReshotAI, added 2024-03-05) — ✅ still online (578★). Imports a 3DGS dataset and creates visualizations; useful to clean floaters, but the author notes it is experimental and slow on large scenes. [GitHub](https://github.com/ReshotAI/gaussian-splatting-blender-addon)
+- **3DGS Render by KIRI Engine** — ✅ **recommended** · Blender 5.1+ · GPL-3.0 · `EM pipeline`
+  Free, full Gaussian-Splat editing and rendering suite with EEVEE integration. [GitHub](https://github.com/Kiri-Innovation/3dgs-render-blender-addon)
+- **Gauss Cannon** — Blender 4.2+ · GPL-3.0
+  Automates the capture side of 3DGS: camera paths and ray-traced point clouds for reconstruction. [GitHub](https://github.com/keshmirian/gauss-cannon)
+- **Gaussian Splatting Blender Addon (ReshotAI)**
+  Imports a 3DGS dataset and creates visualizations; handy for cleaning floaters. [GitHub](https://github.com/ReshotAI/gaussian-splatting-blender-addon)
 
 ## 12. Compositor <a name="compositor"></a>
 
-- **Blender Quick Compositor**: tools for rapid compositing in Blender. [Website](http://www.blenderbrit.co.uk/quickcompositor/)
-- **EasyFX**: excellent tool for post-processing freshly rendered images. [Download](http://www.rymdnisse.net/download/blender-addons/easyfx/)
-- **Photo Editing Tool**: use nodes to edit images inside Blender (extra panel in the compositor).
-- **Color Ramp Dropper**: clever system to sample a series of color values for a color ramp from an image. [Forum thread](https://blenderartists.org/forum/showthread.php?401806-Addon-v1-2-ColorRamp-Dropper-easily-select-color-values-for-ColorRamp-nodes&p=3071567#post3071567), [GitHub](https://github.com/qwenger/BAddons/tree/master/Node_ColorRampDropper)
+- **Blender Quick Compositor** — *(legacy)*
+  Rapid compositing presets. [Website](http://www.blenderbrit.co.uk/quickcompositor/)
+- **Color Ramp Dropper** — *(legacy)*
+  Sample a set of color-ramp values from an image. [Forum](https://blenderartists.org/forum/showthread.php?401806-Addon-v1-2-ColorRamp-Dropper-easily-select-color-values-for-ColorRamp-nodes&p=3071567#post3071567) · [GitHub](https://github.com/qwenger/BAddons/tree/master/Node_ColorRampDropper)
+- **EasyFX** — *(legacy)*
+  Post-process renders quickly via compositor nodes. [Download](http://www.rymdnisse.net/download/blender-addons/easyfx/)
+- **Photo Editing Tool** — *(legacy)*
+  Edit images with compositor nodes (extra panel).
 
 ## 13. Multi-user work in Blender <a name="multi_user"></a>
 
-- **Verse 2**: server + client to model remotely in the same 3D space. [GitHub](https://github.com/verse/verse-blender)
+- **Verse 2** — *(legacy)*
+  Server + client for collaborative modelling in one 3D space. [GitHub](https://github.com/verse/verse-blender)
 
 ## 14. Landscape management <a name="landscape"></a>
 
-- **BlenderGIS**: [GitHub](https://github.com/domlysz/BlenderGIS.git)
-- **Vegetation (grass)**: [3d-wolf.com/grass](http://www.3d-wolf.com/grass.html) — ⚠️ companion Google Doc no longer available (June 2026).
-- **LOD generation for terrains**: [hugobarreira.weebly.com](http://hugobarreira.weebly.com)
+- **BlenderGIS** — `EM pipeline`
+  Import DEM/shapefiles/basemaps and georeference scenes — relevant to CH georeferencing. [GitHub](https://github.com/domlysz/BlenderGIS.git)
 - **Sun Position**
-- **OSG Export**: [GitHub](https://github.com/cedricpinson/osgexport)
+  Sun/sky positioning by date/time/location — bundled in Blender.
+- **LOD generation for terrains** — *(legacy)*
+  Generate levels of detail for terrains. [Website](http://hugobarreira.weebly.com)
+- **OSG Export** — *(legacy)*
+  Export to OpenSceneGraph. [GitHub](https://github.com/cedricpinson/osgexport)
+- **Vegetation (grass)** — *(legacy)*
+  Grass/vegetation setup (companion Google Doc no longer available). [Website](http://www.3d-wolf.com/grass.html)
 
 ## 15. Camera and rendering (static and video) <a name="camera_rendering"></a>
 
-- **Real Camera**: effects for realistic rendering. [3d-wolf.com](https://3d-wolf.com/products/camera.html)
-- **CameraImagePlane**: script to create a projection plane in the camera.
-- **Advanced Boomsmash** (OpenGL viewport video) — ⚠️ original link dead (June 2026).
-- **Orbit camera**: script to create a camera that rotates around an object. [github.com/Antonioya/blender](https://github.com/Antonioya/blender)
+- **Real Camera**
+  Physically-based camera settings for realistic rendering. [Website](https://3d-wolf.com/products/camera.html)
+- **CameraImagePlane** — *(legacy)*
+  Create a projection plane in the camera.
+- **Orbit camera** — *(legacy)*
+  Create a camera that orbits an object. [GitHub](https://github.com/Antonioya/blender)
+- **Advanced Boomsmash** — ⚠️ *(dead)*
+  OpenGL-viewport video capture — original link dead (June 2026).
 
 ## 16. Animation <a name="animation"></a>
 
-- **Blender Power Sequencer**: adds essential tools to Blender's video sequencer for editing videos efficiently. [GitHub](https://github.com/GDquest/Blender-power-sequencer.git)
-- **Animation Nodes**: great add-on that adds a node-based animation system (excellent). [GitHub](https://github.com/JacquesLucke/animation_nodes)
-- **Keyframes Quick Tools**
-- **Flip Animation**
-- **VSE logging system**
-- **Particle morphing tools** (deprecated in recent versions)
+- **Blender Power Sequencer**
+  Efficiency tools for the Video Sequence Editor. [GitHub](https://github.com/GDquest/Blender-power-sequencer.git)
+- **Animation Nodes** — *(legacy)*
+  Node-based procedural animation system. [GitHub](https://github.com/JacquesLucke/animation_nodes)
+- **Flip Animation** — *(legacy)*
+  Mirror / flip an animation.
+- **Keyframes Quick Tools** — *(legacy)*
+  Quick keyframe operations.
+- **VSE logging system** — *(legacy)*
+  Logging system for the VSE.
+- **Particle morphing tools** — ⚠️ *(dead)*
+  Particle morphing (deprecated in recent versions).
 
 ## 17. Connection to external libraries <a name="external_libraries"></a>
 
-- **Blender Cloud textures**: add-on to use Blender Cloud textures out of the box (requires a Blender ID account and subscription).
-- **Blend Library**: ⚠️ original Blender-wiki link dead; this functionality is now largely covered by Blender's built-in **Asset Browser**.
+- **Blender Cloud textures** — *(legacy)*
+  Use Blender Cloud textures out of the box (needs Blender ID + subscription).
+- **Blend Library** — ⚠️ *(dead)*
+  Linked-asset library — wiki link dead; use the built-in Asset Browser.
 
 ## 18. Coding <a name="coding"></a>
 
-- **XML Importer**
-- **Code Autocomplete**: great add-on for developing add-ons. [Release](https://github.com/JacquesLucke/code_autocomplete/releases/tag/code_autocomplete_v2a)
+- **Code Autocomplete** — *(legacy)*
+  Autocomplete for add-on development in Blender's text editor. [Release](https://github.com/JacquesLucke/code_autocomplete/releases/tag/code_autocomplete_v2a)
+- **XML Importer** — *(legacy)*
+  Import XML data.
 
 ## 19. Beautiful themes for Blender <a name="themes"></a>
 
@@ -232,47 +343,55 @@ To be copied into `C:\Users\[USER]\AppData\Roaming\Blender Foundation\Blender\[V
 
 ## 21. Paid / commercial add-ons <a name="paid"></a>
 
-- **ProLightSkies**: great for photorealistic outdoor lighting.
-- **Color Master**: great add-on for color correction; has a rich thumbnail section for quick previews of configurations.
-- **RetopoFlow**: fantastic (and expensive) add-on for retopologizing geometry. Excellent; comes with a set of tutorials (+300 MB).
-
-Added 14 December 2016:
-- **Asset Sketcher**: add-on that lets you paint geometry onto other geometry (e.g. trees on terrain), speeding up the workflow.
-- **Baketools**: advanced baking tools that make the task fast and precise.
-- **Eibriel Linker**: add-on to manage linked assets; good but needs its own particular setup. The developer is a bit dormant (I've been asking for features for months..).
-- **Gaffer**: FANTASTIC tool for light tuning.
-- **Lodscape**: immature but useful system for creating automatic levels of detail in landscapes (works with topologically correct meshes, e.g. created from DEM or Instant Meshes).
-
-Other commercial tools worth noting:
-- Great skin material pack (photorealistic).
-- Great add-on for editing a geometry's UVs.
-- Paints vertex weights based on rules.
-- Ingenious system for levels of detail inside Cycles (fantastic scene optimization).
-- **Capsule**: lets you export groups of objects to FBX following rules.
-- Great add-on to visualize geometry hidden behind other geometry (fantastic during polygonal editing of objects).
-- Shader for Allegorithmic (Substance).
-- **BPainter**: monumental painting add-on for Blender.
+- **BPainter** — commercial
+  Advanced texture-painting suite for Blender.
+- **Gaffer** — commercial
+  Light management and tuning.
+- **RetopoFlow** — commercial
+  In-Blender retopology toolkit (with tutorials).
+- **Asset Sketcher** — *(legacy)* · commercial
+  Paint assets (e.g. trees) onto other geometry.
+- **Baketools** — *(legacy)* · commercial
+  Advanced, fast and precise baking tools.
+- **Capsule** — *(legacy)* · commercial
+  Rule-based FBX export of object groups.
+- **Color Master** — *(legacy)* · commercial
+  Color correction with a rich thumbnail preview section.
+- **Eibriel Linker** — *(legacy)* · commercial
+  Manage linked assets (needs its own particular setup).
+- **Lodscape** — *(legacy)* · commercial
+  Automatic landscape LODs (needs clean topology, e.g. from DEM/Instant Meshes).
+- **ProLightSkies** — *(legacy)* · commercial
+  Photorealistic outdoor sky/lighting.
 
 ## 22. Simulation <a name="simulation"></a>
 
-- **Modeling-Cloth**: great add-on for modelling and simulating cloth. [GitHub](https://github.com/the3dadvantage/Modeling-Cloth)
-- **Projectors** (Ocupe): great add-on to simulate projection onto surfaces in 3D space. [GitHub](https://github.com/Ocupe/Projectors)
+- **Projectors**
+  Simulate projector light onto surfaces in 3D space. [GitHub](https://github.com/Ocupe/Projectors)
+- **Modeling-Cloth** — *(legacy)*
+  Model and simulate cloth interactively. [GitHub](https://github.com/the3dadvantage/Modeling-Cloth)
 
 ## 23. Exporter / Importer <a name="exporter_importer"></a>
 
-- **glTF Blender Exporter**: [GitHub](https://github.com/KhronosGroup/glTF-Blender-Exporter) (note: glTF import/export is now built into Blender).
-- **FBX Bundle**: ⚠️ original link (`renderhjs.net/fbxbundle`) offline; the tool moved to Superhive / Blender Market.
+- **glTF Blender Exporter**
+  glTF import/export — now built into Blender. [GitHub](https://github.com/KhronosGroup/glTF-Blender-Exporter)
+- **FBX Bundle** — ⚠️ *(dead)*
+  Batch FBX export — original link offline; moved to Superhive / Blender Market.
 
 ## 24. 2D plans and sections: derived-data creation <a name="derived_data"></a>
 
-- **MeasureIt_ARCH**: an add-on for Blender that adds tools to create design documentation and technical drawings, which can be previewed in Blender's 3D viewport and exported as images, vector graphics or `.dxf` files. [GitHub](https://github.com/kevancress/MeasureIt_ARCH?tab=readme-ov-file)
+- **MeasureIt_ARCH** — `EM pipeline`
+  Design documentation & technical drawings; export to images, vector graphics or DXF. [GitHub](https://github.com/kevancress/MeasureIt_ARCH?tab=readme-ov-file)
 
 ## 25. BIM / HBIM (Building Information Modelling for Heritage) <a name="bim_hbim"></a>
 
-- **Bonsai** (formerly **BlenderBIM Add-on**) — ✅ **the reference FOSS tool for OpenBIM in Blender**, highly relevant for **HBIM** (Heritage BIM). A free, open-source, *native IFC* authoring platform: it reads, writes and analyses IFC data directly (no lossy round-trip) through a UI built on the **IfcOpenShell** library. Lets you attach structured, standards-based information to heritage geometry — surveyed elements, materials, phases, condition — and exchange it as IFC. Renamed from *BlenderBIM* to *Bonsai* in mid-2024.
-  - Site: [bonsaibim.org](https://bonsaibim.org/)
-  - Install: [Blender Extensions](https://extensions.blender.org/add-ons/bonsai/)
-  - Source: [github.com/IfcOpenShell/IfcOpenShell](https://github.com/IfcOpenShell/IfcOpenShell)
-  - Docs: [docs.ifcopenshell.org/bonsai](https://docs.ifcopenshell.org/bonsai.html)
+- **Bonsai (formerly BlenderBIM)** — ✅ **recommended** · GPL-3.0 · `EM pipeline`
+  Reference FOSS OpenBIM / native-IFC authoring platform — the key tool for HBIM. [Site](https://bonsaibim.org/) · [Blender Extensions](https://extensions.blender.org/add-ons/bonsai/) · [Source](https://github.com/IfcOpenShell/IfcOpenShell) · [Docs](https://docs.ifcopenshell.org/bonsai.html)
 
-  > A typical HBIM pipeline pairs Bonsai with the photogrammetry / point-cloud tools in [section 11](#photogrammetry): reconstruct or scan the asset, import the mesh / point cloud, then model and enrich it as native IFC in Bonsai.
+> A typical HBIM pipeline pairs Bonsai with the photogrammetry / point-cloud tools in
+> [section 11](#photogrammetry): reconstruct or scan the asset, import the mesh / point
+> cloud, then model and enrich it as native IFC in Bonsai.
+
+---
+
+*Generated from 125 catalog entries. Last link verification: 2026-06-09.*

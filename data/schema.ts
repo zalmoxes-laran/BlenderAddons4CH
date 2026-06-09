@@ -19,31 +19,37 @@
 
 import { z } from 'zod';
 
+// Categories are section-aligned: each maps to one section of the catalog.
 export const CATEGORIES = [
-  'photogrammetry',
-  'point-cloud',
-  'gaussian-splatting',
-  'bim-hbim',
+  'sites',
+  'texturing',
+  'vertex-paint',
+  'sculpting',
+  'materials',
+  'pbr',
   'modelling',
   'retopology',
   'uv',
-  'texturing',
-  'materials',
-  'sculpting',
-  'vertex-paint',
+  'interface',
   'baking',
-  'rendering',
-  'camera',
-  'animation',
+  'photogrammetry',
+  'point-cloud',
+  'gaussian-splatting',
   'compositor',
+  'multiuser',
   'gis-landscape',
+  'camera',
+  'rendering',
+  'animation',
+  'libraries',
+  'coding',
+  'themes',
+  'paid',
   'simulation',
   'exchange',
+  'derived-data',
+  'bim-hbim',
   'documentation',
-  'interface',
-  'coding',
-  'libraries',
-  'themes',
   'misc',
 ] as const;
 
@@ -74,8 +80,9 @@ export const addonSchema = z.object({
     .array(z.object({ label: z.string(), url: z.string().url() }))
     .default([]),
 
-  // Cards
+  // Cards / display
   summary: z.string(),
+  image: z.string().optional(),
 });
 
 export type Addon = z.infer<typeof addonSchema>;
