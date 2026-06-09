@@ -9,6 +9,8 @@ Blender add-ons for Cultural Heritage — a curated catalog of tools useful for 
 > **This README is generated** from `data/addons/*.md` via `npm run gen` — do not edit
 > it by hand. Edit the per-tool data files instead. Long-form notes live in each tool's
 > Markdown body and surface on the companion site.
+>
+> 🛠️ To add or edit a tool, see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Table of contents
 

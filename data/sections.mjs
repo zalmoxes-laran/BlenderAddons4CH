@@ -21,6 +21,8 @@ export const meta = {
     '> **This README is generated** from `data/addons/*.md` via `npm run gen` — do not edit',
     '> it by hand. Edit the per-tool data files instead. Long-form notes live in each tool\'s',
     '> Markdown body and surface on the companion site.',
+    '>',
+    '> 🛠️ To add or edit a tool, see [CONTRIBUTING.md](CONTRIBUTING.md).',
   ].join('\n'),
 };
 
