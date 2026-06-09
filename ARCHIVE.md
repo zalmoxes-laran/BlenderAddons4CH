@@ -43,6 +43,11 @@ The author's site or repository vanished and no maintained copy surfaced.
 - **Multibake** — `multibake` · baking — Bake selected objects into individual maps. *Only a dead forum thread; same-name S4C product is unrelated.*
 - **VSE logging system** — `vse-logging` · animation — Logging system for the Video Sequence Editor. *No identifiable add-on found.*
 - **Blender Rebool** — `blender-rebool` · retopology — Repeated-boolean helper. *No surviving standalone "Re-Bool"; "Rebool" is only a Hard Ops feature.*
+- **QuipCAM** — `quipcam` · photogrammetry — Blender OSL shader to model from 360° panoramas. *Only an old Blender Artists forum thread survives.*
+
+## Outdated reference entries
+
+- **12 useful Blender add-ons (Blender Guru)** — `blenderguru-12-addons` · sites — An old listicle of recommended add-ons. *Outdated; not a tool — removed.*
 
 ## Superseded by Blender's own evolution
 

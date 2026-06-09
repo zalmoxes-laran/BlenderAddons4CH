@@ -1,9 +1,13 @@
 ---
-name: "Flip Animation"
-slug: "flip-animation"
-category: "animation"
-platform: "blender"
-status: "legacy"
-lastVerified: "2026-06-09"
-summary: "Mirror / flip an animation."
+name: Flip Animation
+slug: flip-animation
+category: animation
+platform: blender
+status: legacy
+lastVerified: '2026-06-09'
+summary: Mirror / flip an animation.
+links:
+  - label: GitHub
+    url: 'https://github.com/kayy/FlipAnimation'
 ---
+
