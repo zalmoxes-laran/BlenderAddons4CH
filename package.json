@@ -1,0 +1,13 @@
+{
+  "name": "blenderaddons4ch",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Curated catalog of Blender add-ons for Cultural Heritage — structured data + README generator.",
+  "scripts": {
+    "gen": "node scripts/generate-readme.mjs"
+  },
+  "devDependencies": {
+    "gray-matter": "^4.0.3"
+  }
+}
