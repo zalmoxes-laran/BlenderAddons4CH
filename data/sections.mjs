@@ -23,6 +23,7 @@ export const meta = {
     '> Markdown body and surface on the companion site.',
     '>',
     '> 🛠️ To add or edit a tool, see [CONTRIBUTING.md](CONTRIBUTING.md).',
+    '> Removed/defunct tools are preserved in [ARCHIVE.md](ARCHIVE.md) for the record.',
   ].join('\n'),
 };
 

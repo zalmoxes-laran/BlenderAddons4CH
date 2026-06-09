@@ -11,6 +11,7 @@ Blender add-ons for Cultural Heritage — a curated catalog of tools useful for 
 > Markdown body and surface on the companion site.
 >
 > 🛠️ To add or edit a tool, see [CONTRIBUTING.md](CONTRIBUTING.md).
+> Removed/defunct tools are preserved in [ARCHIVE.md](ARCHIVE.md) for the record.
 
 ## Table of contents
 
